@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
 <body>
     <div style="background-color:darkseagreen">
@@ -14,6 +14,22 @@
             banCopyPaste.oncopy = function () { return false; } //複製事件
             banCopyPaste.onpaste = function () { return false; } //貼上事件
             banCopyPaste.oncut = function () { return false; } //剪下事件
+        </script>
+    </div>
+
+    <div style="background-color:darkseagreen">
+        <h2>TextArea 自我調整文字行數</h2>
+        <textarea rows="1" cols="27" id="autoRow"></textarea>
+        <script>
+            window.onload = function () {
+                var autoRow = document.getElementById("autoRow");
+                autoRow.style.overflowY = "hidden"; //超出矩格的內容，會裁去，不會產生捲軸
+                autoRow.onkeyup = function () {
+                    if (autoRow.scrollHeight > autoRow.clientHeight) {
+                        autoRow.style.height = autoRow.scrollHeight + 'px'; //適時動態修改元素高度為捲軸高度
+                    }
+                }
+            }
         </script>
     </div>
 </body>
