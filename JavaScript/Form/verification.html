@@ -6,13 +6,15 @@
 	<meta charset="utf-8" />
 </head>
 <body>
-    <h2>禁止複製與貼上</h2>
-    <input type="text" name="banCopyPaste" id="banCopyPaste" />
-    <script>
-        var banCopyPaste = document.getElementById("banCopyPaste");
-        banCopyPaste.oncopy = function () { return false; } //複製事件
-        banCopyPaste.onpaste = function () { return false; } //貼上事件
-        banCopyPaste.oncut = function () { return false; } //剪下事件
-    </script>
+    <div style="background-color:darkseagreen">
+        <h2>禁止複製與貼上</h2>
+        <input type="text" name="banCopyPaste" id="banCopyPaste" />
+        <script>
+            var banCopyPaste = document.getElementById("banCopyPaste");
+            banCopyPaste.oncopy = function () { return false; } //複製事件
+            banCopyPaste.onpaste = function () { return false; } //貼上事件
+            banCopyPaste.oncut = function () { return false; } //剪下事件
+        </script>
+    </div>
 </body>
 </html>

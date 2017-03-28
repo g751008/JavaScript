@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        //調整字體大小==================================
+        window.onload = function () { 
+            var _fontsize = document.getElementById("fontSize"),
+                fontSize = function (e, unit) {
+                    e.style.fontSize = unit; //改變font-size，字體就會發生變化
+                }
+            document.getElementById("fontSizeBig").onclick = function () { fontSize(_fontsize, "16px");} //綁定按鈕互動事件
+            document.getElementById("fontSizeMedium").onclick = function () { fontSize(_fontsize, "14px"); }
+            document.getElementById("fontSizeSmall").onclick = function () { fontSize(_fontsize, "12px");}
+        }
+        //===============================================
+    </script>
+</head>
+<body>
+    <div style="background-color:darkseagreen">
+        <h2>調整字體大小</h2>
+        <p id="fontSize">字體大小變化展示</p>
+        <p>
+            <input id="fontSizeBig" value="大" type="button" />
+            <input id="fontSizeMedium" value="中" type="button" />
+            <input id="fontSizeSmall" value="小" type="button" />
+        </p>
+    </div>
+</body>
+</html>
